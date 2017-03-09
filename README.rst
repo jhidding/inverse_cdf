@@ -10,3 +10,8 @@ Other than that, this project serves as an example of how to link C++ code with
 Python, using Cython and a proper `setup.py`. This example contains a single
 function with a callback to Python functions from C and a Numpy array
 as argument to the C function.
+
+See the notebook for an example.
+
+.. image:: doc/bokeh_plot.png
+

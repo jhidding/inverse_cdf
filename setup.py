@@ -17,12 +17,12 @@ from codecs import open
 
 if has_cython:
     ext_modules = cythonize([Extension(
-            "inverse_cdf",
+            "inverse_cdf.icdf",
             sources=["src/icdf.cc", "inverse_cdf/icdf.pyx"],
             language="c++")])
 else:
     ext_modules = [Extension(
-            "inverse_cdf",
+            "inverse_cdf.icdf",
             sources=["src/icdf.cc", "inverse_cdf/icdf.cpp"],
             language="c++")]
 
