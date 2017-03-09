@@ -13,5 +13,5 @@ as argument to the C function.
 
 See the notebook for an example.
 
-.. image:: doc/bokeh_plot.png
+.. image:: doc/bokeh_plot.png?raw=true
 
