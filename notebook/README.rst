@@ -2,7 +2,7 @@
 Example of inverse CDF
 ======================
 
-.. code:: python3
+.. code:: python
 
     # load plotting routines
     
@@ -28,7 +28,7 @@ Example of inverse CDF
 To show the use of the ``inverse_cdf`` library, here we define an
 example distribution with two peaks for visual effects.
 
-.. code:: python3
+.. code:: python
 
     import numpy as np
     from inverse_cdf import inverse_cdf
@@ -45,7 +45,7 @@ example distribution with two peaks for visual effects.
         """Example PDF with two peaks."""
         return (normal(-1.5, 1.0)(x) + normal(2.0, 0.5)(x)) / 2.
 
-.. code:: python3
+.. code:: python
 
     x = np.linspace(-5, 5, 200)
     fig = figure(plot_width=600, plot_height=400, title='PDF')
@@ -57,7 +57,7 @@ example distribution with two peaks for visual effects.
 
 Now we integrate and plot the inverse cumulative distribution.
 
-.. code:: python3
+.. code:: python
 
     p = np.linspace(0.0, 1.0, 1025)
     F = inverse_cdf(pdf, -5, 5, 1024)
@@ -72,7 +72,7 @@ Now we integrate and plot the inverse cumulative distribution.
 We can use the result to draw a sample following this particular
 distribution.
 
-.. code:: python3
+.. code:: python
 
     icdf = lambda x: np.interp(x, p, F)
     sample = icdf(np.random.uniform(0.0, 1.0, 100000))
@@ -91,7 +91,7 @@ distribution.
 This method can be quite precise, though at the tails of the
 distribution the error gets bigger.
 
-.. code:: python3
+.. code:: python
 
     dp = (p[1:] - p[:-1]) / (F[1:] - F[:-1])
     x = (F[1:] + F[:-1]) / 2.
